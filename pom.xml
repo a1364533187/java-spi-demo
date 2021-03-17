@@ -13,6 +13,7 @@
         <module>spi-service</module>
         <module>spi-service-impl</module>
         <module>spi-service-impl-1</module>
+        <module>java-jooq-test</module>
     </modules>
 
     <properties>
