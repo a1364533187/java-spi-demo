@@ -20,7 +20,7 @@ public class JooqTest {
 // Fetch a SQL string from a jOOQ Query in order to manually execute it with another tool.
 // For simplicity reasons, we're using the API to construct case-insensitive object references, here.
 //dp_data_factory.sub_dw_app_ptc_dc_stat_web_service_di_v2  clickhouse 表
-        Query query = create.select(field("user_id"), field("pv").div(3), count(field("ac_type")), sum(sum(field("pv", SQLDataType.INTEGER))))
+        Query query = create.select(field("user_id").as(field("userId")), field("pv").div(3), count(field("ac_type")), sum(sum(field("pv", SQLDataType.INTEGER))))
                 .from(table("dp_data_factory.sub_dw_app_ptc_dc_stat_web_service_di_v2"))
                 .where(field("p_date").eq("20200328"))
                 .groupBy(field("user_id"))
