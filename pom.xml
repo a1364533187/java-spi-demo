@@ -14,6 +14,7 @@
         <module>spi-service-impl</module>
         <module>spi-service-impl-1</module>
         <module>java-jooq-test</module>
+        <module>thread-test</module>
     </modules>
 
     <properties>
