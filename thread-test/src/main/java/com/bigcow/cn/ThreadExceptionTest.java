@@ -3,6 +3,8 @@ package com.bigcow.cn;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import com.kuaishou.dp.one.service.common.model.oneapi.QueryAccessControl;
+
 /**
  * Create by suzhiwu on 2021/7/29
  */
@@ -34,6 +36,7 @@ public class ThreadExceptionTest {
     //    }
 
     public static void main(String[] args) {
+        QueryAccessControl queryAccessControl = QueryAccessControl.newBuilder().build();
         NonRejectedLinkedBlockingQueue<Runnable> workQueue = new NonRejectedLinkedBlockingQueue<>(
                 1000, true);
         for (int i = 1; i <= 100; i++) {
