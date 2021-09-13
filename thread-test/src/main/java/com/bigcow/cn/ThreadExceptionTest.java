@@ -36,16 +36,24 @@ public class ThreadExceptionTest {
     //    }
 
     public static void main(String[] args) {
-        QueryAccessControl queryAccessControl = QueryAccessControl.newBuilder().build();
-        NonRejectedLinkedBlockingQueue<Runnable> workQueue = new NonRejectedLinkedBlockingQueue<>(
-                1000, true);
-        for (int i = 1; i <= 100; i++) {
-            workQueue.add(new Task(String.valueOf(i)));
-        }
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 10, TimeUnit.SECONDS, workQueue);
-        executor.submit(new Task("0"));
-        executor.shutdown();
-        System.out.println("workQueue size = " + workQueue.size() + " after shutdown");
+//        QueryAccessControl queryAccessControl = QueryAccessControl.newBuilder().build();
+//        NonRejectedLinkedBlockingQueue<Runnable> workQueue = new NonRejectedLinkedBlockingQueue<>(
+//                1000, true);
+//        for (int i = 1; i <= 100; i++) {
+//            workQueue.add(new Task(String.valueOf(i)));
+//        }
+//        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 10, TimeUnit.SECONDS, workQueue);
+//        executor.submit(new Task("0"));
+//        executor.shutdown();
+//        System.out.println("workQueue size = " + workQueue.size() + " after shutdown");
+        new Thread(() -> {
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("--->haha");
+        }).start();
     }
 
     static class Task implements Runnable {

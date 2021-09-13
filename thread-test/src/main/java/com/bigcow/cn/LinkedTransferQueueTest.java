@@ -32,11 +32,11 @@ public class LinkedTransferQueueTest {
 
         @Override
         public boolean offer(T o) {
-//            try {
-//                transfer(o);
-//            } catch (InterruptedException e) {
-//                Thread.currentThread().interrupt();
-//            }
+            try {
+                transfer(o);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
             put(o);
             return true;
         }
