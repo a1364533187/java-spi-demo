@@ -23,7 +23,7 @@ public class JooqTest {
 //dp_data_factory.sub_dw_app_ptc_dc_stat_web_service_di_v2  clickhouse 表
         Query query = create.select(field("user_id").as(field("userId")), field("pv").div(3), countDistinct(field("ac_type")), sum(sum(field("pv", SQLDataType.INTEGER))))
                 .from(table("dp_data_factory.sub_dw_app_ptc_dc_stat_web_service_di_v2"))
-                .where(field("p_date").eq("20200328"))
+                .where(field("p_date").eq("20200328").and(field("p").in(1,2,3)))
                 .groupBy(field("user_id"))
                 .orderBy(field("kk"))
                 .limit(inline(3))
