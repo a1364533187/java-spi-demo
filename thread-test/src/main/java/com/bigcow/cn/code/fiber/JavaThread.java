@@ -1,4 +1,4 @@
-package com.bigcow.cn.fiber;
+package com.bigcow.cn.code.fiber;
 
 public class JavaThread {
 

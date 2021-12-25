@@ -1,4 +1,4 @@
-package com.bigcow.cn;
+package com.bigcow.cn.code;
 
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;

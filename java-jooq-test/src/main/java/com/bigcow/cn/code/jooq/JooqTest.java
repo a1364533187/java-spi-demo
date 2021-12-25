@@ -1,4 +1,4 @@
-package com.bigcow.cn.jooq;
+package com.bigcow.cn.code.jooq;
 
 import static org.jooq.impl.DSL.count;
 import static org.jooq.impl.DSL.countDistinct;

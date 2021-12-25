@@ -1,4 +1,4 @@
-package com.bigcow.cn.concurrent;
+package com.bigcow.cn.code.concurrent;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

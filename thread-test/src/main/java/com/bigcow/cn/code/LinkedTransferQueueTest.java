@@ -1,4 +1,4 @@
-package com.bigcow.cn;
+package com.bigcow.cn.code;
 
 import java.util.concurrent.LinkedTransferQueue;
 import java.util.concurrent.ThreadPoolExecutor;

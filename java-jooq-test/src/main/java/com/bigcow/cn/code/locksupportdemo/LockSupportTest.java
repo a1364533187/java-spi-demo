@@ -1,4 +1,4 @@
-package com.bigcow.cn.locksupportdemo;
+package com.bigcow.cn.code.locksupportdemo;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
