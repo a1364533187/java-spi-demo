@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package proto.quota;
+
+option java_package = "com.bigcow.quota";
+option java_outer_classname = "QuotaProto";
+option java_multiple_files = true;
+
+message Response {
+  int32 request_id = 1;
+  Status status = 2;
+}
+
+enum Status {
+  OK = 0;
+  RESOURCE_NOT_EXIST = 1;
+  ERROR = 2;
+}
+
+
+
