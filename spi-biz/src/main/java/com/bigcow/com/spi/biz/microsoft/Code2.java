@@ -1,4 +1,4 @@
-package com.bigcow.com.spi.biz;
+package com.bigcow.com.spi.biz.microsoft;
 
 import java.util.concurrent.CountDownLatch;
 
